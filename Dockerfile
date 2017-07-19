@@ -29,6 +29,8 @@ RUN echo 84831b9409646a918e30573bab4c9c91346d8abd > $ANDROID_HOME/licenses/andro
 RUN sdkmanager --update
 RUN sdkmanager "build-tools;26.0.0"
 
-RUN curl -o gradle-2.14-bin.zip https://services.gradle.org/distributions/gradle-2.14-bin.zip
+RUN curl -o gradle-2.14-bin.zip https://downloads.gradle.org/distributions/gradle-2.14-bin.zip
 RUN unzip gradle-2.14-bin.zip -d gradle
 RUN mv gradle/gradle-2.14 gradle/2.14
+
+WORKDIR /root
